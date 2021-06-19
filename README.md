@@ -98,11 +98,11 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the yaml file to Ansible container.
 - Update the hosts file to include the IP addresses of the VMs in the proper group
-- Run the playbook, and navigate to http:/20.102.66.182:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to http://20.102.66.182:5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - Which file is the playbook? Where do you copy it? - the yaml file is the playbook. You copy it to the Ansible container.
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?  - You need to update the /etc/ansible/hosts file to make ansible run the playbook on the specified machines. In order to specify the machines, you would need to add their IP address to the proper groups, then state that group in your playbook.
 
-- _Which URL do you navigate to in order to check that the ELK server is running? - http:/20.102.66.182:5601/app/kibana
+- _Which URL do you navigate to in order to check that the ELK server is running? - http://20.102.66.182:5601/app/kibana
