@@ -56,9 +56,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box |     Yes             | 99.57.29.72          |
+|  web-1   |      No             |                      |
+|  web-2   |      No             |                      |
+|  web-3   |      No             |                      |
+|  ELK-vm  |      No             |                      |
 
 ### Elk Configuration
 
@@ -100,7 +102,6 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include the IP addresses of the VMs in the proper group
 - Run the playbook, and navigate to http://20.102.66.182:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
 - Which file is the playbook? Where do you copy it? - the yaml file is the playbook. You copy it to the Ansible container.
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?  - You need to update the /etc/ansible/hosts file to make ansible run the playbook on the specified machines. In order to specify the machines, you would need to add their IP address to the proper groups, then state that group in your playbook.
